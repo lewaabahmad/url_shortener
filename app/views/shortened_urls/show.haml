@@ -1,0 +1,10 @@
+.container.text-center
+  %h1.my-5 Success!
+  %h2
+    %code
+      = @shortened_url.destination
+  %h2.my-3 can be found here:
+  %h2
+    %a{ href: @shortened_url.vanity_url, target: '_blank' }
+      %code
+        = @shortened_url.vanity_url

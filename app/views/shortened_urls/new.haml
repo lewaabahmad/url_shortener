@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-12.col-md-6.offset-md-3
+      %h1.my-5
+        URL Shortener
+    .col-12.col-md-6.offset-md-3
+      = form_for @shortened_url do | form |
+        .form-group
+          = form.label :destination
+          = form.text_field :destination, class: 'form-control'
+          %small Please enter a valid URL that you would like shortened
+        = form.submit 'Create Shortened URL', class: 'btn btn-primary'
